@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KeyStone Financial</title>
+
+    <style>
+        body {
+              background-image: url('keystocks_website.png'); /* Change 'background.jpg' to your image's path */
+              background-size: cover; /* This will scale the image to cover the entire element */
+              background-position: center center; /* This will center the image */
+              background-attachment: fixed; /* This makes the background stay in place as you scroll */
+              background-repeat: no-repeat; /* This will prevent the image from repeating */
+              margin: 0; /* Remove default margin */
+              padding: 0; /* Remove default padding */
+            }
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "b8bed827-e7bc-45bb-8d80-6438c6bf1cbe",
+        apiHost: "https://flowise-gtyj.onrender.com",
+        chatflowConfig: {
+                    // topK: 2
+                },
+                theme: {
+                    button: {
+                        backgroundColor: "#1AA897",
+                        right: 30,
+                        bottom: 20,
+                        size: "large",
+                        iconColor: "white",
+                        customIconSrc: "chatbot.png",
+                    },
+                    chatWindow: {
+                        welcomeMessage: "Hello! I am the KeyStone Financial AI powered chatbot. How can I assist you?",
+                        backgroundColor: "#ffffff",
+                        fontSize: 16,
+                        poweredByTextColor: "#ffffff",
+                        botMessage: {
+                            backgroundColor: "#1AA897",
+                            textColor: "#ffffff",
+                            showAvatar: true,
+                            avatarSrc: "chatbot_black.png",
+                        },
+                        userMessage: {
+                            backgroundColor: "#3B81F6",
+                            textColor: "#ffffff",
+                            showAvatar: true,
+                            avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                        },
+                        textInput: {
+                            placeholder: "Type your question",
+                            backgroundColor: "#ffffff",
+                            textColor: "#303235",
+                            sendButtonColor: "#3B81F6",
+                        }
+                    }
+                }
+    })
+</script>
+</body>
+</html>
+
+
